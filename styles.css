@@ -28,13 +28,13 @@ html, body {
     justify-content: space-between;
     position: absolute;
     top: 50%;
-
+    /* perfectly center with top (^) and transform and responsive*/
+    transform: translateY(-50%);
 }
 
 .carousel .carousel-actions button {
     border-radius: 50%;
     border: none;
-    margin: 0 50px;
     width: 50px;
     height: 50px;
     align-self: center;
@@ -64,3 +64,10 @@ html, body {
   transform: translate3d(0, 3px, 0);
 
 }
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 50px;
+} 
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 50px;
+} 
