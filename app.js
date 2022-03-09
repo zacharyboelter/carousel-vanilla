@@ -13,11 +13,23 @@ carouselBtnPrev.addEventListener('click', moveToPrevSlide)
 
 
 function moveToNextSlide() {
-    console.log(totalSlides)
+    hideAllSlides();
+    if (slidePosition === totalSlides - 1){
+        slidePosition = 0;
+    } else {
+        slidePosition++
+    }
+    slides[slidePosition].classList.add("carousel-item-visible");
 }
 
 function moveToPrevSlide() {
     console.log(slides)
 }
 
+function hideAllSlides(){
+    for (const slide of slides) {
+        slide.classList.remove('carousel-item-visible')
+        slide.classList.add('carousel-item-hidden')
+    }
+}
 
