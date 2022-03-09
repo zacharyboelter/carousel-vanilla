@@ -23,8 +23,15 @@ function moveToNextSlide() {
 }
 
 function moveToPrevSlide() {
-    console.log(slides)
+    hideAllSlides();
+    if (slidePosition === 0){
+        slidePosition = totalSlides - 1;
+    } else {
+        slidePosition--
+    }
+    slides[slidePosition].classList.add("carousel-item-visible");
 }
+
 
 function hideAllSlides(){
     for (const slide of slides) {
